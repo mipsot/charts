@@ -19,7 +19,7 @@ spec:
   type: {{ .Values.service.type }}
   ports:
   - port: {{ .Values.service.externalPort }}
-    targetPort: 8443
+    targetPort: {{ if .Values.service.useHttps }}8443{{ else }}http{{ end }}
 {{- if hasKey .Values.service "nodePort" }}
     nodePort: {{ .Values.service.nodePort }}
 {{- end }}

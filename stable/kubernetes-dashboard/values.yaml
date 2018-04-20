@@ -41,6 +41,7 @@ affinity: {}
 
 service:
   type: ClusterIP
+  useHttps: true
   externalPort: 443
 
   ## This allows an override of the heapster service name
