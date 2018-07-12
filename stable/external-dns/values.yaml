@@ -11,6 +11,8 @@ sources:
   - service
   - ingress
 
+namespaces: []
+
 # Allow external-dns to publish DNS records for ClusterIP services (optional)
 publishInternalServices: false
 
@@ -56,6 +58,9 @@ infoblox:
   wapiVersion: ""
   wapiConnectionPoolSize: ""
   wapiHttpTimeout: ""
+
+coredns:
+  useHttps: false
 
 ## Limit possible target zones by domain suffixes (optional)
 domainFilters: []
